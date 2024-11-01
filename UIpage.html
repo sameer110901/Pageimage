@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1000px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .button.selected {
+            background-color: #4f88ff;
+            color: white;
+        }
+        .search-bar {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .search-bar input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s;
+        }
+        .card:hover {
+            background-color: #f0f7ff;
+        }
+        .card .icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ffebee;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .card .content h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .card .content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>All Tools</h1>
+            <div class="buttons">
+                <button class="button">My Favorites</button>
+                <button class="button selected">All Tools</button>
+                <button class="button">Plan</button>
+                <button class="button">Create</button>
+                <button class="button">Differentiate</button>
+                <button class="button">Support</button>
+                <button class="button">Learn</button>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">📝</div>
+                <div class="content">
+                    <h3>Chunk Text</h3>
+                    <p>Break complex texts into manageable sections for easier student comprehension.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">📬</div>
+                <div class="content">
+                    <h3>Class Newsletter</h3>
+                    <p>Produce engaging newsletters to keep parents informed about class activities.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">📷</div>
+                <div class="content">
+                    <h3>Class Snapshot</h3>
+                    <p>Review your students' performance and trends.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">↕️</div>
+                <div class="content">
+                    <h3>Clear Directions</h3>
+                    <p>Generate concise, easy-to-follow instructions for assignments and activities.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">💬</div>
+                <div class="content">
+                    <h3>Discussion Prompts</h3>
+                    <p>Craft engaging prompts to stimulate meaningful classroom discussions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">🎟️</div>
+                <div class="content">
+                    <h3>Exit Ticket</h3>
+                    <p>Create quick end-of-lesson assessments to check student understanding.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">✍️</div>
+                <div class="content">
+                    <h3>Fun Class Summary Poem</h3>
+                    <p>Transform memorable class moments into a creative poetic recap.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">📝</div>
+                <div class="content">
+                    <h3>IEP Assistant</h3>
+                    <p>Streamline the creation of Individualized Education Plans.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">📚</div>
+                <div class="content">
+                    <h3>Informational Text</h3>
+                    <p>Create informational text for a variety of topics.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">🎯</div>
+                <div class="content">
+                    <h3>Learning Objective(s)</h3>
+                    <p>Develop clear, measurable learning objectives to guide instruction.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">⚓</div>
+                <div class="content">
+                    <h3>Lesson Hook</h3>
+                    <p>Plan compelling lesson starters to engage students.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">✏️</div>
+                <div class="content">
+                    <h3>Lesson Plan</h3>
+                    <p>Create structured, detailed lesson plans tailored to your curriculum and students' needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
